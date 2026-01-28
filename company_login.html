@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Company Login | NFSU Dharwad</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #003366, #00509e);
+}
+
+/* Login Card */
+.login-card {
+  width: 100%;
+  max-width: 420px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(18px);
+  border-radius: 28px;
+  padding: 45px 40px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+  color: #ffffff;
+}
+
+/* Heading */
+.login-card h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.login-card p {
+  text-align: center;
+  font-size: 0.95rem;
+  color: #e0e0e0;
+  margin-bottom: 28px;
+}
+
+/* Form Group */
+.form-group {
+  margin-bottom: 18px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #f2f2f2;
+}
+
+input {
+  width: 100%;
+  padding: 15px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+input::placeholder {
+  color: #e0e0e0;
+}
+
+input:focus {
+  background: rgba(255, 255, 255, 0.45);
+  box-shadow: 0 0 8px #00aaff;
+}
+
+/* Button */
+button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 15px;
+  border-radius: 25px;
+  border: none;
+  background: #0077cc;
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 119, 204, 0.6);
+  transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background: #005fa3;
+  transform: translateY(-2px);
+}
+
+/* Links */
+.extra-links {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.extra-links a {
+  display: block;
+  margin-top: 8px;
+  text-decoration: none;
+  color: #cce6ff;
+  font-size: 0.9rem;
+}
+
+.extra-links a:hover {
+  text-decoration: underline;
+}
+
+/* Error Message */
+#errorMsg {
+  margin-top: 12px;
+  text-align: center;
+  color: #ff8080;
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .login-card {
+    padding: 35px 25px;
+    border-radius: 22px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="login-card">
+  <h2>Company Login</h2>
+  <p>NFSU Dharwad Placement Portal</p>
+
+  <div class="form-group">
+    <label for="companyEmail">Company Email</label>
+    <input type="email" id="companyEmail" placeholder="Enter registered email" required autofocus>
+  </div>
+
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input type="password" id="password" placeholder="Enter password" required>
+  </div>
+
+  <button onclick="loginCompany()">Login</button>
+
+  <p id="errorMsg"></p>
+
+  <div class="extra-links">
+    <a href="#">Forgot Password?</a>
+    <a href="company_registration.html">New Company? Register Here</a>
+  </div>
+</div>
+
+<script>
+function loginCompany() {
+  const email = document.getElementById("companyEmail").value.trim();
+  const password = document.getElementById("password").value.trim();
+  const errorMsg = document.getElementById("errorMsg");
+
+  if (!email || !password) {
+    errorMsg.textContent = "Please enter both email and password.";
+    return;
+  }
+
+  if (!email.includes("@")) {
+    errorMsg.textContent = "Enter a valid email address.";
+    return;
+  }
+
+  // Demo only
+  alert("Login successful! (Frontend demo)");
+  errorMsg.textContent = "";
+}
+</script>
+
+</body>
+</html>
