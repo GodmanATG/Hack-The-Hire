@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Login | NFSU Dharwad</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin:0; padding:0; }
+  body, html {
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #003366, #00509e);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .login-card {
+    background: rgba(255,255,255,0.15); /* glass effect */
+    backdrop-filter: blur(15px);
+    padding: 50px 35px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+    width: 100%;
+    max-width: 400px;
+    color: #fff;
+    transition: transform 0.3s ease;
+  }
+
+  .login-card:hover { transform: translateY(-5px); }
+
+  .login-card h2 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #e0e0e0;
+  }
+
+  .form-group { margin-bottom: 20px; }
+  label {
+    display:block;
+    font-weight:500;
+    margin-bottom:6px;
+    color:#f0f0f0;
+  }
+  input[type="email"], input[type="password"] {
+    width:100%;
+    padding:12px 15px;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    font-size:1rem;
+    transition: 0.3s;
+    background: rgba(255,255,255,0.25);
+    color: #fff;
+  }
+  input[type="email"]::placeholder,
+  input[type="password"]::placeholder { color: #e0e0e0; }
+
+  input[type="email"]:focus, input[type="password"]:focus {
+    background: rgba(255,255,255,0.35);
+    box-shadow: 0 0 8px #00aaff;
+  }
+
+  button {
+    width:100%;
+    padding:14px;
+    margin-top:10px;
+    border:none;
+    border-radius: 25px;
+    background: #00aaff;
+    color:white;
+    font-weight:700;
+    font-size:1.1rem;
+    cursor:pointer;
+    transition: 0.3s;
+  }
+  button:hover { background: #0088cc; }
+
+  #errorMsg {
+    text-align:center;
+    color:#ff8080;
+    margin-top:12px;
+    font-weight:600;
+  }
+
+  @media(max-width:480px){
+    .login-card { padding: 35px 25px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="login-card">
+  <h2>Student Login</h2>
+  <div class="form-group">
+    <label for="email">College Email ID</label>
+    <input type="email" id="email" placeholder="Enter your college email" required>
+  </div>
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input type="password" id="password" placeholder="Enter password" required>
+  </div>
+  <button onclick="validateForm()">Login</button>
+  <p id="errorMsg"></p>
+</div>
+
+<script>
+function validateForm(){
+  const email = document.getElementById("email").value.trim();
+  const password = document.getElementById("password").value.trim();
+  const errorMsg = document.getElementById("errorMsg");
+
+  if(!email.endsWith("@college.edu")){
+    errorMsg.textContent = "Please use your official college email.";
+    return;
+  }
+  if(!password){
+    errorMsg.textContent = "Please enter password.";
+    return;
+  }
+
+  alert("Login successful (demo only).");
+  errorMsg.textContent = "";
+}
+</script>
+
+</body>
+</html>
