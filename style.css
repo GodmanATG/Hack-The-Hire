@@ -1,0 +1,252 @@
+/* ---------------- Reset Defaults ---------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ---------------- Body ---------------- */
+body {
+    background-color: #f7f9fc;
+    color: #003366;
+    scroll-behavior: smooth;
+}
+
+/* ---------------- Navbar ---------------- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: rgba(11, 105, 199, 0.8);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-section img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #ffcc00;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 102, 204, 0.95);
+    list-style: none;
+    padding: 10px 0;
+    border-radius: 5px;
+    top: 50px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 8px 20px;
+}
+
+/* ---------------- Hero + Stats Wrapper ---------------- */
+.hero-stats-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    gap: 40px;
+}
+
+/* Hero Section */
+.hero {
+    flex: 2; /* more space */
+    background: url('image1.jpg') no-repeat center center/cover;
+    border-radius: 15px;
+    min-height: 400px;
+    position: relative;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 51, 102, 0.5);
+    border-radius: 15px;
+}
+
+.hero .hero-content {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.3em;
+    line-height: 1.5;
+}
+
+/* Stats Boxes */
+.stats-boxes {
+    flex: 1; /* less space */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.stat-box {
+    background-color: #f5f9ff;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.stat-box h3 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #003366;
+}
+
+.stat-box p {
+    font-size: 1em;
+    color: #3a3838;
+    margin: 0;
+}
+
+.stat-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+}
+
+/* ---------------- Role Cards ---------------- */
+.wrapper h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #ffcc00;
+    text-align: center;
+}
+
+.wrapper .tagline {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    color: #ffcc00;
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.card {
+    background-color: rgb(188, 180, 180);
+    padding: 30px;
+    border-radius: 15px;
+    width: 250px;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.card h2, .card p, .card a { color: #003366; }
+
+.card h2 { margin-bottom: 15px; }
+
+.card p { margin-bottom: 20px; font-size: 1em; }
+
+.card a {
+    text-decoration: none;
+    background-color: #ffcc00;
+    color: #003366;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.card a:hover { background-color: #e6b800; transform: scale(1.05); }
+
+.card:hover {
+    transform: translateY(-10px);
+    background-color: rgba(0, 51, 102, 0.2);
+}
+
+/* ---------------- Sections Below Hero ---------------- */
+section {
+    background-color: #ffffff;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 100px 20px 60px 20px;
+}
+
+section h2 {
+    font-size: 2.7em;
+    margin-bottom: 30px;
+    color: #003366;
+}
+
+section p {
+    font-size: 1.4em;
+    line-height: 1.8;
+    color: #969090;
+}
+
+#statistics p { color: #222; }
+#why-recruit p { color: #222; }
+#director p { font-style: italic; color: #222; }
+
+/* ---------------- Responsive ---------------- */
+@media(max-width: 1200px) {
+    .hero-stats-wrapper {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+@media(max-width: 900px) {
+    .cards { flex-direction: column; align-items: center; }
+    .navbar { flex-direction: column; gap: 10px; }
+    .nav-links { flex-direction: column; gap: 10px; }
+    section { padding: 80px 15px 40px 15px; }
+    section h2 { font-size: 2.2em; }
+    section p { font-size: 1.2em; }
+}
+
