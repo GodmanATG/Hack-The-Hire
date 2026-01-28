@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard | NFSU Placement Portal</title>
+    <link rel="stylesheet" href="admin-dashboard.css">
+</head>
+<body>
+
+<header class="top-header">
+    <h1>NFSU Placement Portal</h1>
+    <div class="admin-info">
+        <span>Admin</span>
+        <a href="admin-login.html" class="logout">Logout</a>
+    </div>
+</header>
+
+<main class="dashboard">
+
+    <!-- Stats -->
+    <section class="stats">
+        <div class="stat-card">
+            <h3>Total Students</h3>
+            <p>420</p>
+        </div>
+        <div class="stat-card">
+            <h3>Registered Companies</h3>
+            <p>18</p>
+        </div>
+        <div class="stat-card">
+            <h3>Active Applications</h3>
+            <p>312</p>
+        </div>
+    </section>
+
+    <!-- Student Database -->
+    <section class="card">
+        <h2>Student Database</h2>
+
+        <div class="actions">
+            <button>Export CSV</button>
+            <button>Export XLSX</button>
+            <button>Export PDF</button>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Course</th>
+                    <th>CGPA</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Anshu Bhadani</td>
+                    <td>anshu@nfsu.ac.in</td>
+                    <td>B.Tech Cyber</td>
+                    <td>8.2</td>
+                    <td class="ok">Active</td>
+                    <td>
+                        <button class="blacklist">Blacklist</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Rahul Kumar</td>
+                    <td>rahul@nfsu.ac.in</td>
+                    <td>M.Sc Forensics</td>
+                    <td>6.8</td>
+                    <td class="blocked">Blacklisted</td>
+                    <td>
+                        <button disabled>Blocked</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Company Database -->
+    <section class="card">
+        <h2>Company Registrations</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Company</th>
+                    <th>Role</th>
+                    <th>CTC</th>
+                    <th>Eligibility</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>ABC Technologies</td>
+                    <td>Cyber Analyst</td>
+                    <td>6 LPA</td>
+                    <td>CGPA ≥ 7.5</td>
+                </tr>
+                <tr>
+                    <td>XYZ Forensics</td>
+                    <td>Forensic Intern</td>
+                    <td>4 LPA</td>
+                    <td>CGPA ≥ 6.5</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+</main>
+
+<footer>
+    <p>© NFSU Dharwad Placement Cell</p>
+</footer>
+
+</body>
+</html>

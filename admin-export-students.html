@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Export Students | NFSU Placement Portal</title>
+    <link rel="stylesheet" href="admin-export-students.css">
+</head>
+<body>
+
+<header class="top-header">
+    <h1>NFSU Placement Portal</h1>
+    <a href="admin-dashboard.html" class="back-link">← Back to Dashboard</a>
+</header>
+
+<main class="container">
+
+    <!-- FILTER SECTION -->
+    <section class="card">
+        <h2>Filter Students</h2>
+
+        <div class="filter-grid">
+            <div>
+                <label>Minimum CGPA</label>
+                <input type="number" step="0.1" placeholder="e.g. 7.5">
+            </div>
+
+            <div>
+                <label>Course</label>
+                <select>
+                    <option value="">All</option>
+                    <option>B.Tech Cyber Security</option>
+                    <option>M.Sc Forensics</option>
+                    <option>LL.M</option>
+                </select>
+            </div>
+
+            <div>
+                <label>Status</label>
+                <select>
+                    <option value="">All</option>
+                    <option>Active</option>
+                    <option>Blacklisted</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <!-- COLUMN SELECTION -->
+    <section class="card">
+        <h2>Select Columns to Export</h2>
+
+        <div class="checkbox-grid">
+            <label><input type="checkbox" checked> Name</label>
+            <label><input type="checkbox" checked> Email</label>
+            <label><input type="checkbox"> Roll Number</label>
+            <label><input type="checkbox"> Course</label>
+            <label><input type="checkbox"> CGPA</label>
+            <label><input type="checkbox"> Skills</label>
+        </div>
+    </section>
+
+    <!-- EXPORT ACTIONS -->
+    <section class="card">
+        <h2>Export Data</h2>
+
+        <div class="export-buttons">
+            <button>Export as CSV</button>
+            <button>Export as XLSX</button>
+            <button>Export as PDF</button>
+        </div>
+    </section>
+
+    <!-- PREVIEW TABLE (Optional but impressive) -->
+    <section class="card">
+        <h2>Preview (Filtered Students)</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Course</th>
+                    <th>CGPA</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Anshu Bhadani</td>
+                    <td>anshu@nfsu.ac.in</td>
+                    <td>B.Tech Cyber</td>
+                    <td>8.2</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+</main>
+
+<footer>
+    <p>© NFSU Dharwad Placement Cell</p>
+</footer>
+
+</body>
+</html>

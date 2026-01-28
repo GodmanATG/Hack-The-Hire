@@ -1,0 +1,92 @@
+/* Global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f6f8;
+    color: #333;
+}
+
+/* Header */
+.top-header {
+    background-color: #0b3c5d;
+    color: white;
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.back-link {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* Container */
+.container {
+    max-width: 700px;
+    margin: 60px auto;
+    padding: 0 15px;
+}
+
+/* Card */
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.08);
+}
+
+.warning-card h2 {
+    color: #0b3c5d;
+    margin-bottom: 15px;
+}
+
+/* Warning text */
+.warning-text {
+    background: #fff3cd;
+    border-left: 4px solid #f0ad4e;
+    padding: 12px;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* Student details */
+.student-details p {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+/* Buttons */
+.action-buttons {
+    margin-top: 25px;
+}
+
+.confirm-btn {
+    background-color: #c0392b;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.confirm-btn:hover {
+    background-color: #a93226;
+}
+
+.cancel-btn {
+    text-decoration: none;
+    background-color: #0b3c5d;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 4px;
+    font-size: 14px;
+}

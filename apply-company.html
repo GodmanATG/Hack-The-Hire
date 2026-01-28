@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Apply | NFSU Placement Portal</title>
+    <link rel="stylesheet" href="apply-company.css">
+</head>
+<body>
+
+<header class="top-header">
+    <h1>NFSU Placement Portal</h1>
+    <a href="student-dashboard.html" class="back-link">← Back to Dashboard</a>
+</header>
+
+<main class="container">
+
+    <!-- Company Info -->
+    <section class="card">
+        <h2>Company Details</h2>
+        <p><strong>Company:</strong> ABC Technologies</p>
+        <p><strong>Role:</strong> Cyber Security Analyst</p>
+        <p><strong>CTC:</strong> 6 LPA</p>
+        <p><strong>Eligibility:</strong> CGPA ≥ 7.5</p>
+    </section>
+
+    <!-- Application Form -->
+    <section class="card">
+        <h2>Application Form</h2>
+
+        <form action="/student/apply" method="POST">
+
+            <div class="form-group">
+                <label>Student Name</label>
+                <input type="text" value="Anshu Bhadani" readonly>
+            </div>
+
+            <div class="form-group">
+                <label>College Email</label>
+                <input type="email" value="anshu@nfsu.ac.in" readonly>
+            </div>
+
+            <div class="form-group">
+                <label>CGPA</label>
+                <input type="text" value="8.2" readonly>
+            </div>
+
+            <div class="form-group">
+                <label>Resume</label>
+                <input type="file" required>
+            </div>
+
+            <div class="form-group">
+                <label>Why should we select you?</label>
+                <textarea rows="4" placeholder="Short answer (optional)"></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">
+                Submit Application
+            </button>
+
+        </form>
+    </section>
+
+</main>
+
+<footer>
+    <p>© NFSU Dharwad Placement Cell</p>
+</footer>
+
+</body>
+</html>

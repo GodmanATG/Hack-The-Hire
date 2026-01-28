@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f4f6f8;
+}
+
+.top-header {
+    background: #0b3c5d;
+    color: white;
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-info span {
+    margin-right: 15px;
+}
+
+.logout {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.dashboard {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 15px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 6px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+.card h2 {
+    margin-bottom: 15px;
+    color: #0b3c5d;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+table th {
+    background: #eef3f7;
+}
+
+.apply-btn {
+    padding: 6px 14px;
+    background: #0b3c5d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.apply-btn:hover {
+    background: #092c45;
+}
+
+.status {
+    font-weight: bold;
+}
+
+.status.selected {
+    color: green;
+}
+
+.status.pending {
+    color: orange;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    font-size: 13px;
+    color: #777;
+}

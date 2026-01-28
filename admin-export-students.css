@@ -1,0 +1,151 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f6f8;
+    color: #333;
+}
+
+
+.top-header {
+    background-color: #0b3c5d;
+    color: white;
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-header h1 {
+    font-size: 22px;
+}
+
+.back-link {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+
+.container {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 15px;
+}
+
+
+.card {
+    background: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.08);
+}
+
+.card h2 {
+    margin-bottom: 15px;
+    color: #0b3c5d;
+    font-size: 18px;
+}
+
+
+.filter-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.filter-grid label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+.filter-grid input,
+.filter-grid select {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.filter-grid input:focus,
+.filter-grid select:focus {
+    outline: none;
+    border-color: #0b3c5d;
+}
+
+.checkbox-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.checkbox-grid label {
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.checkbox-grid input {
+    margin-right: 6px;
+}
+
+
+.export-buttons {
+    margin-top: 10px;
+}
+
+.export-buttons button {
+    background-color: #0b3c5d;
+    color: white;
+    border: none;
+    padding: 8px 18px;
+    margin-right: 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.export-buttons button:hover {
+    background-color: #092c45;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table th,
+table td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+    font-size: 14px;
+}
+
+table th {
+    background-color: #eef3f7;
+    color: #0b3c5d;
+    font-weight: bold;
+}
+
+
+footer {
+    text-align: center;
+    padding: 15px;
+    font-size: 13px;
+    color: #777;
+}

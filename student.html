@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Dashboard | NFSU Dharwad</title>
+    <link rel="stylesheet" href="student-dashboard.css">
+</head>
+<body>
+
+<header class="top-header">
+    <h1>NFSU Placement Portal</h1>
+    <div class="user-info">
+        <span>Welcome, Student</span>
+        <a href="student-login.html" class="logout">Logout</a>
+    </div>
+</header>
+
+<main class="dashboard">
+
+    <!-- Profile Section -->
+    <section class="card">
+        <h2>My Profile</h2>
+        <p><strong>Name:</strong> Anshu Bhadani</p>
+        <p><strong>Email:</strong> anshu@nfsu.ac.in</p>
+        <p><strong>Course:</strong> B.Tech Cyber Security</p>
+        <p><strong>CGPA:</strong> 8.2</p>
+    </section>
+
+    <!-- Eligible Companies -->
+    <section class="card">
+        <h2>Eligible Companies</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Company</th>
+                    <th>Role</th>
+                    <th>CTC</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>ABC Technologies</td>
+                    <td>Cyber Analyst</td>
+                    <td>6 LPA</td>
+                    <td>
+                        <button class="apply-btn">Apply</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>XYZ Forensics</td>
+                    <td>Digital Forensic Intern</td>
+                    <td>4 LPA</td>
+                    <td>
+                        <button class="apply-btn">Apply</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Application Status -->
+    <section class="card">
+        <h2>My Applications</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Company</th>
+                    <th>Current Round</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>ABC Technologies</td>
+                    <td>Technical Interview</td>
+                    <td class="status selected">Shortlisted</td>
+                </tr>
+                <tr>
+                    <td>XYZ Forensics</td>
+                    <td>Written Test</td>
+                    <td class="status pending">Pending</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+</main>
+
+<footer>
+    <p>© NFSU Dharwad Placement Cell</p>
+</footer>
+
+</body>
+</html>
